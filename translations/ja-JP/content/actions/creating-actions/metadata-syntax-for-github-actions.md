@@ -58,7 +58,7 @@ inputs:
 
 ワークフローファイル内で、あるいはデフォルトの入力値を使ってアクションに入力を指定すると、{% data variables.product.prodname_dotcom %}はその入力に対応して`INPUT_<VARIABLE_NAME>`という名前の環境変数を生成します。 生成される環境変数では、入力の名前を大文字にして、空白を`_`に変換します。
 
-たとえば、ワークフローがnumOctocats及びoctocatEyeColorという入力を定義すると、アクションのコードはこれらの入力の値を`INPUT_NUMOCTOCATS`及び`INPUT_OCTOCATEYECOLOR`という環境変数で読み取れます。
+たとえば、ワークフローで `numOctocats` および `octocatEyeColor` 入力が定義されている場合、アクションコードは `INPUT_NUMOCTOCATS` および `INPUT_OCTOCATEYECOLOR` 環境変数を使用して入力の値を読み取ることができます。
 
 #### `inputs.<input_id>`
 
@@ -75,6 +75,10 @@ inputs:
 #### `inputs.<input_id>.default`
 
 **オプション** デフォルト値を示す`文字列`。 デフォルト値は、入力パラメーターがワークフローファイルで指定されたなかった場合に使われます。
+
+#### `inputs.<input_id>.deprecationMessage`
+
+**オプション** 入力パラメータが使用されている場合、この `string` は警告メッセージとしてログに記録されます。 この警告で入力が非推奨であることをユーザに通知し、その他の方法を知らせることができます。
 
 ### `outputs`
 
@@ -167,7 +171,7 @@ runs:
 
 ```yaml
   pre: 'cleanup.js'
-  pre-if: 'runner.os == linux'
+  pre-if: runner.os == 'linux'
 ```
 
 #### `post`
@@ -193,7 +197,7 @@ runs:
 
 ```yaml
   post: 'cleanup.js'
-  post-if: 'runner.os == linux'
+  post-if: runner.os == 'linux'
 ```
 
 ### 複合実行ステップアクションのための`runs`
@@ -291,14 +295,14 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-  - 'bzz'
+    - 'bzz'
   pre-entrypoint: 'setup.sh'
   entrypoint: 'main.sh'
 ```
 
 #### `runs.image`
 
-**必須** アクションを実行するためにコンテナとして使われるDockerイメージ。 この値には、Dockerのベースイメージ名、自分のリポジトリ中のローカル`Dockerfile`、Docker Hubあるいはその他のレジストリ中のパブリックなイメージを指定できます。 To reference a `Dockerfile` local to your repository, the file must be named `Dockerfile` and you must use a path relative to your action metadata file. `docker`アプリケーションがこのファイルを実行します。
+**必須** アクションを実行するためにコンテナとして使われるDockerイメージ。 この値には、Dockerのベースイメージ名、自分のリポジトリ中のローカル`Dockerfile`、Docker Hubあるいはその他のレジストリ中のパブリックなイメージを指定できます。 リポジトリのローカルにある `Dockerfile` を参照するには、ファイルに `Dockerfile` という名前を付け、アクションメタデータファイルに相対的なパスを使用する必要があります。 `docker`アプリケーションがこのファイルを実行します。
 
 #### `runs.env`
 
@@ -319,7 +323,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-  - 'bzz'
+    - 'bzz'
   entrypoint: 'main.sh'
   post-entrypoint: 'cleanup.sh'
 ```

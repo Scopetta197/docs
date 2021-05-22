@@ -6,12 +6,12 @@
 
 | 包管理器           | YAML 值           | 支持的版本                  | 私有仓库  | 私有注册表 |  供应   |
 | -------------- | ---------------- | ---------------------- |:-----:|:-----:|:-----:|
-| Bundler        | `bundler`        | v1                     |       | **✓** | **✓** |
+| Bundler        | `bundler`        | v1, v2                 |       | **✓** | **✓** |
 | Cargo          | `cargo`          | v1                     | **✓** | **✓** |       |
 | Composer       | `composer`       | v1, v2                 | **✓** | **✓** |       |
 | Docker         | `docker`         | v1                     | **✓** | **✓** |       |
 | Hex            | `混合`             | v1                     |       | **✓** |       |
-| elm-package    | `elm`            | v0.18, v0.19           | **✓** | **✓** |       |
+| elm-package    | `elm`            | v0.19                  | **✓** | **✓** |       |
 | git submodule  | `gitsubmodule`   | N/A（无版本）               | **✓** | **✓** |       |
 | GitHub Actions | `github-actions` | N/A（无版本）               | **✓** | **✓** |       |
 | Go 模块          | `gomod`          | v1                     | **✓** | **✓** | **✓** |

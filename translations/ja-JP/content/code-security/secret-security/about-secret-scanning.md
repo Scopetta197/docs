@@ -12,7 +12,7 @@ versions:
   enterprise-server: '>=3.0'
   github-ae: '*'
 topics:
-  - repositories
+  - Repositories
 ---
 
 {% data reusables.secret-scanning.beta %}
@@ -45,7 +45,7 @@ Service providers can partner with {% data variables.product.company_short %} to
 {% data variables.product.prodname_secret_scanning_caps %} は、{% data variables.product.prodname_GH_advanced_security %} の一環として、Organization が所有するリポジトリ全てで使用できます。 ユーザ所有のリポジトリでは使用できません。
 {% endif %}
 
-リポジトリの管理者または Organization のオーナーは、Organization が所有する{% if currentVersion == "free-pro-team@latest" %}プライベートな{% endif %}リポジトリで {% data variables.product.prodname_secret_scanning %} を有効化できます。 全てのリポジトリ、または Organization 内の全ての新しいリポジトリに対して、{% data variables.product.prodname_secret_scanning %} を有効化できます。{% if currentVersion == "free-pro-team@latest" %}{% data variables.product.prodname_secret_scanning_caps %} は、ユーザが所有するプライベートリポジトリでは使用できません。{% endif %}詳しい情報については、「[リポジトリのセキュリティと分析設定を管理する](/github/administering-a-repository/managing-security-and-analysis-settings-for-your-repository)」および「[Organization のセキュリティおよび分析設定を管理する](/github/setting-up-and-managing-organizations-and-teams/managing-security-and-analysis-settings-for-your-organization)」を参照してください。
+リポジトリの管理者または Organization のオーナーは、Organization が所有する{% if currentVersion == "free-pro-team@latest" %}プライベートな{% endif %}リポジトリで {% data variables.product.prodname_secret_scanning %} を有効化できます。 You can enable  {% data variables.product.prodname_secret_scanning %} for all your repositories, or for all new repositories within your organization.{% if currentVersion == "free-pro-team@latest" %} {% data variables.product.prodname_secret_scanning_caps %} is not available for user-owned private repositories.{% endif %} For more information, see "[Managing security and analysis settings for your repository](/github/administering-a-repository/managing-security-and-analysis-settings-for-your-repository)" and "[Managing security and analysis settings for your organization](/organizations/keeping-your-organization-secure/managing-security-and-analysis-settings-for-your-organization)."
 
 {% data variables.product.prodname_secret_scanning %}が有効化されている{% if currentVersion == "free-pro-team@latest" %}プライベート{% endif %}リポジトリにコミットをプッシュすると、{% data variables.product.prodname_dotcom %} はコミットの内容をスキャンしてシークレットを探します。
 
@@ -53,19 +53,19 @@ Service providers can partner with {% data variables.product.company_short %} to
 
 - {% data variables.product.prodname_dotcom %} は、リポジトリ管理者と Organizationのオーナーにメールアラートを送信します。
 {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.0" or currentVersion == 'github-ae@next' %}
-- {% data variables.product.prodname_dotcom %} sends an email alert to the contributor who committed the secret to the repository, with a link to the related {% data variables.product.prodname_secret_scanning %} alert. The commit author can then view the alert in the repository, and resolve the alert.
+- {% data variables.product.prodname_dotcom %} は、シークレットをリポジトリにコミットしたコントリビューターに、関連する {% data variables.product.prodname_secret_scanning %} アラートのリンクを記載したメールアラートを送信します。 コミット作者は、リポジトリでこのアラートを表示して、アラートを解決できます。
 {% endif %}
-- {% data variables.product.prodname_dotcom %} displays an alert in the repository.{% if currentVersion == "enterprise-server@3.0" %} For more information, see "[Managing alerts from {% data variables.product.prodname_secret_scanning %}](/github/administering-a-repository/managing-alerts-from-secret-scanning)."{% endif %}
+- {% data variables.product.prodname_dotcom %} は、リポジトリのアラートを表示します。{% if currentVersion == "enterprise-server@3.0" %}詳しい情報については、「[{% data variables.product.prodname_secret_scanning %} からのアラートを管理する](/github/administering-a-repository/managing-alerts-from-secret-scanning)」を参照してください。{% endif %}
 
 {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.0" or currentVersion == 'github-ae@next' %}
 For more information about viewing and resolving {% data variables.product.prodname_secret_scanning %} alerts, see "[Managing alerts from {% data variables.product.prodname_secret_scanning %}](/github/administering-a-repository/managing-alerts-from-secret-scanning)."{% endif %}
 
-Repository administrators and organization owners can grant users and teams access to {% data variables.product.prodname_secret_scanning %} alerts. 詳しい情報については「[リポジトリのセキュリティ及び分析の設定の管理](/github/administering-a-repository/managing-security-and-analysis-settings-for-your-repository#granting-access-to-security-alerts)」を参照してください。
+リポジトリ管理者と Organization のオーナーは、ユーザおよび Team に {% data variables.product.prodname_secret_scanning %} アラートへのアクセスを許可できます。 詳しい情報については「[リポジトリのセキュリティ及び分析の設定の管理](/github/administering-a-repository/managing-security-and-analysis-settings-for-your-repository#granting-access-to-security-alerts)」を参照してください。
 
 {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.0" %}
-To monitor results from {% data variables.product.prodname_secret_scanning %} across your private repositories or your organization, you can use the {% data variables.product.prodname_secret_scanning %} API. For more information about API endpoints, see "[{% data variables.product.prodname_secret_scanning_caps %}](/rest/reference/secret-scanning)."{% endif %}
+To monitor results from {% data variables.product.prodname_secret_scanning %} across your private repositories or your organization, you can use the {% data variables.product.prodname_secret_scanning %} API. API に関する詳しい情報については、「[{% data variables.product.prodname_secret_scanning_caps %}](/rest/reference/secret-scanning)」を参照してください。{% endif %}
 
-{% data variables.product.prodname_dotcom %}  currently scans{% if currentVersion == "free-pro-team@latest" %} private{% endif %} repositories for secrets issued by the following service providers.
+現在 {% data variables.product.prodname_dotcom %} は、{% if currentVersion == "free-pro-team@latest" %} プライベート{% endif %} リポジトリをスキャンして、次のサービスプロバイダーが発行したシークレットを探します。
 
 {% data reusables.secret-scanning.partner-secret-list-private-repo %}
 

@@ -1,18 +1,17 @@
 ---
 title: Manter os segredos protegidos
 shortTitle: Segurança de segredo
-intro: 'Let {% data variables.product.company_short %} do the hard work of ensuring that tokens, private keys, and other code secrets are not exposed in your repository.'
+intro: 'Permita que {% data variables.product.company_short %} faça o trabalho duro de garantir que tokens, chaves privadas e outros segredos de código não sejam expostos no seu repositório.'
 product: '{% data reusables.gated-features.secret-scanning %}'
 versions:
   free-pro-team: '*'
   enterprise-server: '>=3.0'
   github-ae: '*'
 topics:
-  - repositories
+  - Repositories
+children:
+  - /about-secret-scanning
+  - /configuring-secret-scanning-for-your-repositories
+  - /managing-alerts-from-secret-scanning
 ---
-
 ### Índice
-
-{% link_in_list /about-secret-scanning %}
-{% link_in_list /configuring-secret-scanning-for-your-repositories %}
-{% link_in_list /managing-alerts-from-secret-scanning %}

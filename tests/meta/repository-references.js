@@ -32,7 +32,9 @@ const ALLOW_LIST = new Set([
   'smimesign',
   'tweetsodium',
   'choosealicense.com',
-  'renaming'
+  'renaming',
+  'localization-support',
+  'docs'
 ])
 
 describe('check for repository references', () => {
@@ -47,6 +49,8 @@ describe('check for repository references', () => {
       '.algolia-cache',
       '.git',
       '.github/actions-scripts/enterprise-server-issue-templates/*.md',
+      '.github/review-template.md',
+      '.next',
       'dist',
       'node_modules',
       'translations',

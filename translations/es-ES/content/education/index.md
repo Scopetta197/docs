@@ -20,7 +20,7 @@ featuredLinks:
     - /github/getting-started-with-github/github-cli
     - /education/manage-coursework-with-github-classroom/teach-with-github-classroom
 changelog:
-  label: 'education'
+  label: education
 layout: product-landing
 versions:
   free-pro-team: '*'

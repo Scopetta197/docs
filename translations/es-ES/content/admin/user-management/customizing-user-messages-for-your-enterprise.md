@@ -1,5 +1,6 @@
 ---
 title: Personalizar los mensajes de usuario para tu empresa
+shortTitle: Customizing user messages
 redirect_from:
   - /enterprise/admin/user-management/creating-a-custom-sign-in-message/
   - /enterprise/admin/user-management/customizing-user-messages-on-your-instance
@@ -8,8 +9,10 @@ intro: 'Puedes crear mensajes personalizados que los usuarios verán en {% data 
 versions:
   enterprise-server: '*'
   github-ae: '*'
+type: how_to
 topics:
-  - empresa
+  - Enterprise
+  - Maintenance
 ---
 
 ### Acerca de los mensajes de usuario
@@ -66,16 +69,15 @@ Los mensajes obligatorios tienen varios usos.
 - Decir a los usuarios cómo obtener ayuda con {% data variables.product.product_location %}
 - Garantizar que todos los usuarios lean tus condiciones de servicio para utilizar {% data variables.product.product_location %}
 
-{% note %}
-
-**Note:** After you configure a mandatory message for {% data variables.product.product_location %}, you cannot change or remove the message.
-
-{% endnote %}
-
-
 Si incluyes cajas de verificación con lenguaje de marcado en el mensaje, todas ellas deberán seleccionarse antes de que el usuario pueda descartar el mensaje. Por ejemplo, si incluyes tus condiciones de servicio en el mensaje obligatorio, puede que necesites que cada usuario seleccione una casilla para confirmar que leyó dichas condiciones.
 
 Cada vez que un usuario vea un mensaje obligatorio, se crea un evento de bitácora de auditoría. El evento incluye la versión del mensaje que vio el usuario. Para obtener más información, consulta la sección "[Acciones auditadas](/admin/user-management/audited-actions)".
+
+{% note %}
+
+**Nota:** Si cambias el mensaje obligatorio de {% data variables.product.product_location %}, los usuarios que ya lo hayan reconocido no verán el mensaje nuevo.
+
+{% endnote %}
 
 {% data reusables.enterprise-accounts.access-enterprise %}
 {% data reusables.enterprise-accounts.settings-tab %}

@@ -1,7 +1,7 @@
 ---
 title: GitHub-Datenschutzerklärung
 redirect_from:
-  - /datenschutz/
+  - /privacy/
   - /privacy-policy/
   - /privacy-statement/
   - /github-privacy-policy/
@@ -10,8 +10,8 @@ redirect_from:
 versions:
   free-pro-team: '*'
 topics:
-  - policy
-  - legal
+  - Policy
+  - Legal
 ---
 
 Effective date: December 19, 2020
@@ -64,7 +64,7 @@ Wir benötigen zum Zeitpunkt der Kontoerstellung bestimmte allgemeine Informatio
 ##### Payment information
 Wenn Sie sich bei uns bei einem kostenpflichtigen Konto anmelden, Geld über das GitHub-Sponsorenprogramm senden oder eine Anwendung im GitHub Marketplace kaufen, erfassen wir Ihren vollständigen Namen, Ihre Adresse und Kreditkarteninformationen oder PayPal-Informationen. Bitte beachten Sie, dass GitHub Ihre Kreditkarteninformationen oder PayPal-Informationen nicht verarbeitet oder speichert, aber unser Zahlungsabwickler von Drittanbietern dies tut.
 
-Wenn Sie eine Anwendung auf [GitHub Marketplace](https://github.com/marketplace) auflisten und verkaufen, benötigen wir Ihre Bankinformationen. If you raise funds through the [GitHub Sponsors Program](https://github.com/sponsors), we require some [additional information](/github/supporting-the-open-source-community-with-github-sponsors/becoming-a-sponsored-developer#submitting-your-bank-information) through the registration process for you to participate in and receive funds through those services and for compliance purposes.
+Wenn Sie eine Anwendung auf [GitHub Marketplace](https://github.com/marketplace) auflisten und verkaufen, benötigen wir Ihre Bankinformationen. If you raise funds through the [GitHub Sponsors Program](https://github.com/sponsors), we require some [additional information](/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-user-account#submitting-your-bank-information) through the registration process for you to participate in and receive funds through those services and for compliance purposes.
 
 ##### Profile information
 Sie können uns weitere Informationen zu Ihrem Kontoprofil übermitteln, z. B. Ihren vollständigen Namen, einen Avatar mit einem Foto, Ihre Biographie, Ihren Standort, Ihr Unternehmen und eine URL zu einer Drittanbieter-Website. Diese Informationen können personenbezogene Benutzerdaten enthalten. Bitte beachten Sie, dass Ihre Profilinformationen für andere Benutzer unseres Dienstes sichtbar sein können.
@@ -192,7 +192,7 @@ Ebenso können Projekte auf GitHub öffentlich zugängliche personenbezogene Ben
 
 #### Organisationen
 
-Sie können durch Ihre Aktionen auf GitHub angeben, dass Sie bereit sind, Ihre personenbezogenen Benutzerdaten zu teilen. Wenn Sie an einer Organisation mitarbeiten oder Mitglied einer Organisation werden, erhalten die Kontoinhaber möglicherweise Ihre personenbezogenen Benutzerdaten. Wenn Sie eine Einladung zu einer Organisation annehmen, werden Sie über die Arten von Informationen informiert, die Besitzer möglicherweise einsehen können (weitere Informationen finden Sie unter [Informationen zur Organisationsmitgliedschaft](/github/setting-up-and-managing-your-github-user-account/about-organization-membership)). Wenn Sie eine Einladung zu einer Organisation mit [verifizierter Domäne](/github/setting-up-and-managing-organizations-and-teams/verifying-your-organizations-domain) annehmen, dann können die Eigentümer dieser Organisation Ihre vollständige(n) E-Mail-Adresse(en) innerhalb der verifizierten Domänen dieser Organisation sehen.
+Sie können durch Ihre Aktionen auf GitHub angeben, dass Sie bereit sind, Ihre personenbezogenen Benutzerdaten zu teilen. Wenn Sie an einer Organisation mitarbeiten oder Mitglied einer Organisation werden, erhalten die Kontoinhaber möglicherweise Ihre personenbezogenen Benutzerdaten. Wenn Sie eine Einladung zu einer Organisation annehmen, werden Sie über die Arten von Informationen informiert, die Besitzer möglicherweise einsehen können (weitere Informationen finden Sie unter [Informationen zur Organisationsmitgliedschaft](/github/setting-up-and-managing-your-github-user-account/about-organization-membership)). Wenn Sie eine Einladung zu einer Organisation mit [verifizierter Domäne](/organizations/managing-organization-settings/verifying-your-organizations-domain) annehmen, dann können die Eigentümer dieser Organisation Ihre vollständige(n) E-Mail-Adresse(en) innerhalb der verifizierten Domänen dieser Organisation sehen.
 
 Please note, GitHub may share your username, [Usage Information](#usage-information), and [Device Information](#device-information) with the owner(s) of the Organization you are a member of, to the extent that your User Personal Information is provided only to investigate or respond to a security incident that affects or compromises the security of that particular Organization.
 
@@ -321,7 +321,7 @@ Im unwahrscheinlichen Fall, dass es zu einem Streit zwischen Ihnen und GitHub ü
 
 ### Änderungen an unserer Datenschutzerklärung
 
-GitHub kann unsere Datenschutzerklärung von Zeit zu Zeit ändern, wobei die meisten Änderungen eher geringfügig sein dürften. Wir werden die Benutzer über unsere Website mindestens 30 Tage vor Inkrafttreten der Änderung über wesentliche Änderungen dieser Datenschutzerklärung informieren, indem wir eine Benachrichtigung auf unserer Homepage veröffentlichen oder E-Mails an die primäre E-Mail-Adresse versenden, die in Ihrem GitHub-Konto angegeben ist. Wir werden auch unser [Websiterichtlinien-Repository](https://github.com/github/site-policy/) aktualisieren, das alle Änderungen an dieser Richtlinie nachverfolgt. For other changes to this Privacy Statement, we encourage Users to [watch](/github/managing-subscriptions-and-notifications-on-github/viewing-your-subscriptions#configuring-your-watch-settings-for-an-individual-repository) or to check our Site Policy repository frequently.
+GitHub kann unsere Datenschutzerklärung von Zeit zu Zeit ändern, wobei die meisten Änderungen eher geringfügig sein dürften. Wir werden die Benutzer über unsere Website mindestens 30 Tage vor Inkrafttreten der Änderung über wesentliche Änderungen dieser Datenschutzerklärung informieren, indem wir eine Benachrichtigung auf unserer Homepage veröffentlichen oder E-Mails an die primäre E-Mail-Adresse versenden, die in Ihrem GitHub-Konto angegeben ist. Wir werden auch unser [Websiterichtlinien-Repository](https://github.com/github/site-policy/) aktualisieren, das alle Änderungen an dieser Richtlinie nachverfolgt. For other changes to this Privacy Statement, we encourage Users to [watch](/github/managing-subscriptions-and-notifications-on-github/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository) or to check our Site Policy repository frequently.
 
 ### Lizenz
 

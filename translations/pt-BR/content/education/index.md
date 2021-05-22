@@ -20,11 +20,12 @@ featuredLinks:
     - /github/getting-started-with-github/github-cli
     - /education/manage-coursework-with-github-classroom/teach-with-github-classroom
 changelog:
-  label: 'education'
+  label: education
 layout: product-landing
 versions:
   free-pro-team: '*'
+children:
+  - /explore-the-benefits-of-teaching-and-learning-with-github-education
+  - /manage-coursework-with-github-classroom
 ---
 
-<!-- {% link_with_intro /explore-the-benefits-of-teaching-and-learning-with-github-education %} -->
-<!-- {% link_with_intro /manage-coursework-with-github-classroom %} -->

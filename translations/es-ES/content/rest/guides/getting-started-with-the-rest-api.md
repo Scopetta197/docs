@@ -9,7 +9,7 @@ versions:
   enterprise-server: '*'
   github-ae: '*'
 topics:
-  - api
+  - API
 ---
 
 
@@ -53,11 +53,10 @@ Mmmm, sabe a [JSON][json]. Vamos a agregar el marcador `-i` para que incluya los
 ```shell
 $ curl -i https://api.github.com/users/defunkt
 
-> HTTP/1.1 200 OK
+> HTTP/2 200
 > Server: GitHub.com
 > Date: Sun, 11 Nov 2012 18:43:28 GMT
 > Content-Type: application/json; charset=utf-8
-> Status: 200 OK
 > ETag: "bfd85cbf23ac0b0c8a29bee02e7117c6"
 > X-RateLimit-Limit: 60
 > X-RateLimit-Remaining: 57
@@ -170,7 +169,7 @@ $ curl -i {% data variables.product.api_url_pre %}/repos/twbs/bootstrap
 De la misma forma, podemos [ver los repositorios del usuario autenticado][user repos api]:
 
 ```shell
-$ curl -i -H "Authorization: token 5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4" \
+$ curl -i -H "Authorization: token {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.1" or currentVersion == "github-ae@next" %}ghp_16C7e42F292c6912E7710c838347Ae178B4a{% else %}5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4{% endif %}" \
     {% data variables.product.api_url_pre %}/user/repos
 ```
 
@@ -207,7 +206,7 @@ API de {% data variables.product.product_name %} es compatible con la creación 
 necesitamos hacer `POST` en algunos JSON que contengan los detalles y las opciones de configuración.
 
 ```shell
-$ curl -i -H "Authorization: token 5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4" \
+$ curl -i -H "Authorization: token {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.1" or currentVersion == "github-ae@next" %}ghp_16C7e42F292c6912E7710c838347Ae178B4a{% else %}5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4{% endif %}" \
     -d '{ \
         "name": "blog", \
         "auto_init": true, \
@@ -226,7 +225,7 @@ Posteriormente vamos a obtener nuestro repositorio recién creado:
 ```shell
 $ curl -i {% data variables.product.api_url_pre %}/repos/pengwynn/blog
 
-> HTTP/1.1 404 Not Found
+> HTTP/2 404
 
 > {
 >    "message": "Not Found"
@@ -242,7 +241,7 @@ La IU de informe de problemas en {% data variables.product.product_name %} prete
 Tal como en github.com, la API proporciona algunos cuantos métodos para ver los informes de problemas para el usuario autenticado. Para [ver todos tus informes de problemas][get issues api], llama a `GET /issues`:
 
 ```shell
-$ curl -i -H "Authorization: token 5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4" \
+$ curl -i -H "Authorization: token {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.1" or currentVersion == "github-ae@next" %}ghp_16C7e42F292c6912E7710c838347Ae178B4a{% else %}5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4{% endif %}" \
     {% data variables.product.api_url_pre %}/issues
 ```
 
@@ -250,7 +249,7 @@ Para obtener únicamente los [informes de problemas bajo alguna de tus organizac
 /orgs/<org>/issues`:
 
 ```shell
-$ curl -i -H "Authorization: token 5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4" \
+$ curl -i -H "Authorization: token {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.1" or currentVersion == "github-ae@next" %}ghp_16C7e42F292c6912E7710c838347Ae178B4a{% else %}5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4{% endif %}" \
     {% data variables.product.api_url_pre %}/orgs/rails/issues
 ```
 
@@ -267,7 +266,7 @@ Un proyecto con el tamaño de Rails tiene miles de informes de problemas. Necesi
 ```shell
 $ curl -i {% data variables.product.api_url_pre %}/repos/rails/rails/issues
 
-> HTTP/1.1 200 OK
+> HTTP/2 200
 
 > ...
 > Link: &lt;{% data variables.product.api_url_pre %}/repositories/8514/issues?page=2&gt;; rel="next", &lt;{% data variables.product.api_url_pre %}/repositories/8514/issues?page=30&gt;; rel="last"
@@ -283,7 +282,7 @@ Ahora que hemos visto cómo paginar las listas de informes de problemas, vamos a
 Para crear un informe de problemas, necesitamos estar autenticados, así que pasaremos un token de OAuth en el encabezado. También, pasaremos el título, cuerpo, y etiquetas en el cuerpo de JSON a la ruta `/issues` debajo del repositorio en el cual queremos crear el informe de problemas:
 
 ```shell
-$ curl -i -H 'Authorization: token 5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4' \
+$ curl -i -H 'Authorization: token {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.1" or currentVersion == "github-ae@next" %}ghp_16C7e42F292c6912E7710c838347Ae178B4a{% else %}5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4{% endif %}' \
 $    -d '{ \
 $         "title": "New logo", \
 $         "body": "We should have one", \
@@ -291,7 +290,7 @@ $         "labels": ["design"] \
 $       }' \
 $    {% data variables.product.api_url_pre %}/repos/pengwynn/api-sandbox/issues
 
-> HTTP/1.1 201 Created
+> HTTP/2 201
 > Location: {% data variables.product.api_url_pre %}/repos/pengwynn/api-sandbox/issues/17
 > X-RateLimit-Limit: 5000
 
@@ -341,7 +340,7 @@ Una gran parte de ser un buen ciudadano de la API es respetar los límites de ta
 ```shell
 $ curl -i {% data variables.product.api_url_pre %}/users/defunkt
 
-> HTTP/1.1 200 OK
+> HTTP/2 200
 > ETag: "bfd85cbf23ac0b0c8a29bee02e7117c6"
 ```
 
@@ -351,7 +350,7 @@ Además del cuerpo de JSON, toma nota del código de estado HTTP de `200` y del 
 $ curl -i -H 'If-None-Match: "bfd85cbf23ac0b0c8a29bee02e7117c6"' \
 $    {% data variables.product.api_url_pre %}/users/defunkt
 
-> HTTP/1.1 304 Not Modified
+> HTTP/2 304
 ```
 
 El estado `304` indica que el recurso no ha cambiado desde la última vez que lo solicitamos y que la respuesta no contendrá ningún cuerpo. Como bonificación, las respuestas `304` no contarán para tu [límite de tasa][rate-limiting].

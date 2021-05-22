@@ -8,7 +8,7 @@ versions:
   enterprise-server: '*'
   github-ae: '*'
 topics:
-  - api
+  - API
 ---
 
 {% for operation in currentRestOperations %}
@@ -155,7 +155,8 @@ Puedes comunicar que un ambiente transitorio ya no existe si configuras el `stat
 {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.1" or currentVersion == "github-ae@next" %}
 ## Ambientes
 
-La API de Ambientes te permite crear, configurar y borrar ambientes. Para obtener información sobre los ambientes, consulta la sección "[Ambientes](/actions/reference/environments)".
+La API de Ambientes te permite crear, configurar y borrar ambientes. Para obtener información sobre los ambientes, consulta la sección "[Ambientes](/actions/reference/environments)". To manage environment secrets, see "[Secrets](/rest/reference/actions#secrets)."
+
 {% for operation in currentRestOperations %}
   {% if operation.subcategory == 'environments' %}{% include rest_operation %}{% endif %}
 {% endfor %}
@@ -193,7 +194,7 @@ El usuario autenticado será el autor de cualquier fusión que se realice a trav
 
 ## Pages
 
-La API de {% data variables.product.prodname_pages %} recupera información sobre tu configuración de {% data variables.product.prodname_pages %} y sobre los estados de tus compilaciones. Solo los propietarios autenticados pueden acceder a la información sobre el sitio y sobre las compilaciones{% if currentVersion != "github-ae@latest" %}, incluso si los sitios web son públicos{% endif %}. Para obtener más información, consulta la sección "[Acerca de {% data variables.product.prodname_pages %}](/github/working-with-github-pages/about-github-pages)".
+La API de {% data variables.product.prodname_pages %} recupera información sobre tu configuración de {% data variables.product.prodname_pages %} y sobre los estados de tus compilaciones. Solo los propietarios autenticados pueden acceder a la información sobre el sitio y sobre las compilaciones{% if currentVersion != "github-ae@latest" %}, incluso si los sitios web son públicos{% endif %}. Para obtener más información, consulta la sección "[Acerca de {% data variables.product.prodname_pages %}](/pages/getting-started-with-github-pages/about-github-pages)".
 
 En las terminales de la API de {% data variables.product.prodname_pages %} que llevan una clave de `status` en su respuesta, el valor puede ser uno de entre los siguientes:
 * `null`: El sitio aún tiene que crearse.
@@ -205,7 +206,7 @@ En las terminales de la API de {% data variables.product.prodname_pages %} que l
 En las terminales de la API de {% data variables.product.prodname_pages %} que devulenven información del sitio de GitHub Pages, las respuestas de JSON incluyen estos campos:
 * `html_url`: La URL absoluta (incluyendo el modelo) del sitio de Páginas que se interpretó. Por ejemplo, `https://username.github.io`.
 * `source`: Un objeto que contiene la rama origen y el directorio del sitio de Páginas que se interpretó. Esto incluye:
-   - `branch`: La rama del repositorio que se utilizó para publicar los [archivos de código fuente de tu sitio](/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Por ejemplo, _main_ o _gh-pages_.
+   - `branch`: La rama del repositorio que se utilizó para publicar los [archivos de código fuente de tu sitio](/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Por ejemplo, _main_ o _gh-pages_.
    - `path`: El directorio del repositorio desde el cual publica el sitio. Podría ser `/` o `/docs`.
 
 {% for operation in currentRestOperations %}
